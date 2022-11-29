@@ -12,7 +12,7 @@ export class RateLimit {
   }
 
   async check() {
-    if (this.count >= MAX_REQUESTS) { 
+    if (this.count >= MAX_REQUESTS) {
       return false;
     }
     this.count++;
@@ -20,10 +20,8 @@ export class RateLimit {
   }
 
   async startTime() {
-    console.log(INTERVAL * 1000);
-    
-    setTimeout(()=>{
-      this.count = 0
-    }, INTERVAL * 1000)
+    setTimeout(() => {
+      this.count = 0;
+    }, INTERVAL * 1000);
   }
 }
